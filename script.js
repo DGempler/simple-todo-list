@@ -11,12 +11,11 @@ form.addEventListener("submit", function(event) {
   createSpan(newItem);
   if (input.value === '') {
     input.setAttribute("placeholder", "YOU ACTUALLY HAVE TO ENTER AN ITEM!!!!");
-  }
-  else {
+  } else {
     list.appendChild(newItem);
     form.reset();
     input.setAttribute("placeholder", "What do you need to do?");
-    }
+  }
 });
 
 function createSpan(newItem) {
@@ -36,8 +35,7 @@ list.addEventListener("click", function(event) {
       } else {
         li[i].setAttribute("class", "completed");
       }
-    }
-    else if(li[i].querySelector('span') == event.target) {
+    } else if(li[i].querySelector('span') == event.target) {
       list.removeChild(li[i]);
     }
   }
